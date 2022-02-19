@@ -10,6 +10,6 @@ class DATABASE_CONFIG
 		'password' => '', // パスワード
 		'database' => 'irohaboard', // データベース名
 		'prefix' => 'ib_', // 変更しないでください
-		'encoding' => 'utf8'
+		'encoding' => 'utf8mb4'
 	];
 }
