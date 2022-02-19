@@ -45,7 +45,7 @@
 			$body = '<iframe id="contentFrame" width="100%" height="100%" scrolling="yes" src="'.h($content['Content']['url']).'"></iframe>';
 			break;
 		case 'movie': // 動画コンテンツ
-			$body = '<video src="'.h($content['Content']['url']).'" controls width="100%" oncontextmenu="return false;"></video>';
+			$body = '<video src="'.h($content['Content']['url']).'" controls width="100%" height="100%" oncontextmenu="return false;"></video>';
 			break;
 		case 'text': // テキスト型コンテンツ
 			$body = h($content['Content']['body']);
