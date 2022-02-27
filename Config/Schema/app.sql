@@ -196,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `ib_contents_questions` (
   `modified` datetime DEFAULT NULL,
   `sort_no` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for `ib_logs`
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `ib_contents` (
   `sort_no` int(8) NOT NULL DEFAULT '0',
   `comment` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for `ib_cake_sessions`
