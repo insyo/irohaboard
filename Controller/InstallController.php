@@ -134,9 +134,9 @@ class InstallController extends AppController
 						return;
 					}
 					
-					if(!preg_match("/^[a-zA-Z0-9]+$/", $username))
+					if(!preg_match('/^[a-zA-Z0-9!"#$%&\(\)=\-~+<>_,@\/\.\*|]+$/', $username))
 					{
-						$this->Flash->error('ログインIDは英数字で入力して下さい');
+						$this->Flash->error('ログインIDは英数字記号で入力して下さい');
 						return;
 					}
 					
@@ -154,9 +154,9 @@ class InstallController extends AppController
 						return;
 					}
 					
-					if(!preg_match("/^[a-zA-Z0-9]+$/", $password))
+					if(!preg_match('/^[a-zA-Z0-9!"#$%&\(\)=\-~+<>_,@\/\.\*|]+$/', $password))
 					{
-						$this->Flash->error('パスワードは英数字で入力して下さい');
+						$this->Flash->error('パスワードは英数字記号で入力して下さい');
 						return;
 					}
 					
