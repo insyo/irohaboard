@@ -35,7 +35,7 @@ class User extends AppModel
 			],
 			[
 				'rule' => 'alphaNumericMB',
-				'message' => 'ログインIDは英数字で入力して下さい'
+				'message' => 'ログインIDは英数字記号で入力して下さい'
 			],
 			[
 				'rule' => ['between', 4, 32],
@@ -57,7 +57,7 @@ class User extends AppModel
 		'password' => [
 			[
 				'rule' => 'alphaNumericMB',
-				'message' => 'パスワードは英数字で入力して下さい'
+				'message' => 'ログインIDは英数字記号で入力して下さい'
 			],
 			[
 				'rule' => ['between', 4, 32],
@@ -67,7 +67,7 @@ class User extends AppModel
 		'new_password' => [
 			[
 				'rule' => 'alphaNumericMB',
-				'message' => 'パスワードは英数字で入力して下さい',
+				'message' => 'ログインIDは英数字記号で入力して下さい',
 				'allowEmpty' => true
 			],
 			[
