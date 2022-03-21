@@ -20,7 +20,7 @@ class AppModel extends Model
 	private $is_object = false; // 連想配列をオブジェクトに変換するかどうか（実験的実装）
 	
 	/**
-	 * 英数字チェック（マルチバイト対応）
+	 * 英数字記号チェック（マルチバイト対応）
 	 * 
 	 * @param array $check チェック対象
 	 * @return bool OK:true, NG:false
@@ -30,7 +30,7 @@ class AppModel extends Model
 		$value = array_values($check);
 		$value = $value[0];
 		
-		return preg_match('/^[a-zA-Z0-9]+$/', $value);
+		return preg_match('/^[a-zA-Z0-9!"#$%&\(\)=\-~+<>_,@\/\.\*|]+$/', $value);
 	}
 
 	/**
