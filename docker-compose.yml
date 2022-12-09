@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: irohaboard_2023
+    ports:
+      - 0.0.0.0:7654:80
+    links:
+      - mysql:mysql
+    depends_on:
+      - mysql
+    environment:
+      - name=value
+    entrypoint: httpd -DFOREGROUND
+    restart: always
+    volumes:
+      - irohaboard_uploads_2023:/var/www/html/webroot/uploads
+  mysql:
+    image: mysql:5.7.40
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssword+1
+      MYSQL_DATABASE: irohaboard
+      MYSQL_USER: iroha
+      MYSQL_PASSWORD: P@ssword+1
+      TZ: "Asia/Tokyo"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - 3306:3306
+    restart: always
+    volumes:
+      - irohaboard_mysql_2023:/var/lib/mysql
+
+volumes:
+  irohaboard_uploads_2023:
+  irohaboard_mysql_2023:
